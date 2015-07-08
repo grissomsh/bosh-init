@@ -15,6 +15,9 @@ RUN chmod +x bosh-init-0.0.70-linux-amd64
 RUN mv bosh-init-0.0.70-linux-amd64 /usr/local/bin/bosh-init
 RUN apt-get install -y build-essential zlibc zlib1g-dev openssl libxslt-dev libxml2-dev libssl-dev libreadline6 libreadline6-dev libyaml-dev libsqlite3-dev sqlite3 
 
+RUN apt-get install -y ruby1.9.3
+RUN apt-get install -y rubygems-integration
+
 ENV GOROOT /usr/local/go
 ENV GOBIN $GOROOT/bin
 ENV GOPKG $GOROOT//pkg/tool/linux_amd64
